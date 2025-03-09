@@ -1,74 +1,35 @@
-# HTMX Project
+# HTMX Frontend
 
-## 📂 Project Structure
+## 📂 Frontend Structure
 
 ```
-HTMX/
-├── backendExpress/   # Express Server
-│   ├── index.ts       # Main server file
-│   ├── package.json   # npm configuration and dependencies
-│   ├── tsconfig.json  # TypeScript configuration
-│   ├── bun.lock       # Bun lock file
-│   ├── README.md      # Express documentation
-│
-├── backendFlask/      # Flask Server
-│   ├── app.py         # Main server file
-│   ├── venv/          # Python virtual environment
-│
-└── frontend/          # Stateless Frontend Server
-    ├── index.html     # Main page
-    ├── styles.css     # Project styles
+frontend/
+├── index.html     # Main page
+├── styles.css     # Project styles
 ```
 
 ---
 
-## 🚀 Running the Project
+## 🚀 Running the Frontend
 
-### 🟢 Running Express Server (Node.js + Bun)
+The frontend is a **stateless server**, meaning it does not handle any logic or store data. Instead, it relies on backend servers for processing and responses. To use it, simply open `index.html` in a browser.
 
-```bash
-cd backendExpress
-bun install  # Install dependencies
-bun run dev  # Start the server
-```
-
-### 🔵 Running Flask Server (Python)
-
-```bash
-cd backendFlask
-source venv/bin/activate  # Activate virtual environment (Linux/macOS)
-# or
-venv\Scripts\activate  # Activate virtual environment (Windows)
-
-pip install -r requirements.txt  # Install required packages
-python app.py  # Start the server
-```
-
-### 🎨 Running the Frontend
-
-You can simply open `frontend/index.html` in a browser or start a simple local server:
+Alternatively, you can start a simple local server:
 
 ```bash
 cd frontend
 python -m http.server 8000  # Start a local server on port 8000
 ```
 
----
-
-## 🔗 API Routes
-
-| Route       | Description |
-|-------------|-----------------------------|
-| `/hello`    | Simple response from the server |
+This will allow you to access the frontend at `http://localhost:8000/`.
 
 ---
 
-### 🛠 Requirements
-- **Node.js** + **Bun** for Express
-- **Python 3.12** + Flask
+## 🛠 Requirements
+
 - **Modern browser** with HTMX support
+- **Backend servers** (Express & Flask) for handling data and processing requests
 
-📌 **The frontend acts as a stateless server, while the backend (Express & Flask) functions as the full-stack server, handling both logic and data processing.**
+📌 **The frontend is purely responsible for rendering and interacting with the user. All data handling is delegated to the backend.**
 
-🎉 **Enjoy building applications with HTMX, Express, and Flask!**
-
+🎉 **Enjoy building applications with HTMX!**
