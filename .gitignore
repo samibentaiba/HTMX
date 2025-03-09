@@ -1,0 +1,19 @@
+# بيئة العمل الافتراضية (venv)
+venv/
+.env
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.log
+instance/
+
+# إعدادات بيئة التطوير (VS Code, PyCharm)
+.vscode/
+.idea/
+*.iml
+
+# ملفات التكوين المحلية
+*.sqlite3
+config.json
+config.yaml
